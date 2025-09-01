@@ -1,0 +1,7 @@
+{
+  "input": {
+    "messages": [
+      { "role": "user", "content": "Hey!" }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+runpod~=1.7.7
+transformers>=4.55.0
+bitsandbytes>=0.45.0
+kernels
+torch==2.6.0
