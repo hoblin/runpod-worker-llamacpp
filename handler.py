@@ -1,5 +1,4 @@
 import runpod
-import time
 import json
 from llama_cpp import Llama
 
@@ -11,10 +10,8 @@ def handler(event):
     input = event['input']
 
     prompt = input.get('prompt')
-    seconds = input.get('seconds', 0)
 
     print(f"Received prompt: {prompt}")
-    print(f"Sleeping for {seconds} seconds...")
 
     if 'messages' in input:
         return llm.create_chat_completion(**input)
