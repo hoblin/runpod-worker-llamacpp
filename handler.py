@@ -2,7 +2,10 @@ import runpod
 import json
 from llama_cpp import Llama
 
-llm = Llama(model_path="model.gguf")
+args = json.loads(os.environ.get("LLAMA_ARGS", "{}"))
+if "model_path" not in args:
+    args["model_path"] = "model.gguf"
+llm = Llama(**args)
 
 
 def handler(event):
