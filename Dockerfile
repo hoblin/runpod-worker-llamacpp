@@ -14,7 +14,7 @@ ENV GGML_CUDA=on
 RUN pip install llama-cpp-python \
   --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu121
 
-RUN wget -O /model.gguf https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf
+RUN wget -O /model.gguf https://huggingface.co/bartowski/huihui-ai_Huihui-gpt-oss-20b-BF16-abliterated-GGUF/blob/main/huihui-ai_Huihui-gpt-oss-20b-BF16-abliterated-Q6_K.gguf
 
 # Copy your handler file
 COPY handler.py /
